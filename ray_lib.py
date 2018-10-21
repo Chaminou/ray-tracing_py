@@ -1,6 +1,4 @@
 
-import numpy as np
-
 class Vector :
     def __init__(self, coords) :
         self.x = coords[0]
@@ -22,7 +20,7 @@ class Vector :
         return self.x**2 + self.y**2 + self.z**2
 
     def length(self) :
-        return np.sqrt(self.length2())
+        return self.length2()**(1/2)
 
     def dot(self, u) :
         return self.x*u.x + self.y*u.y + self.z*u.z
